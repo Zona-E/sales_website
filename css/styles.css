@@ -16,12 +16,12 @@
     left: 0px;
   }
   
-  #sidebar ul li a {
+  #sidebar ul li {
     color: rgba(230, 230, 230, .9);
     list-style: none;
+    text-align: center;
     padding: 15px 10px;
     border-bottom: 1px solid rgba(100, 100, 100, .3);
-    text-align: center;
   }
   
   .logo {
