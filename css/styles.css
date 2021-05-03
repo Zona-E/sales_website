@@ -46,7 +46,9 @@
   }
 
   #sidebar ul ul{
-    display: none;
+
+    position: relative;
+   display: none;
 
   
   }
