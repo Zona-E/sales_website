@@ -1,6 +1,9 @@
 * {
     margin: 0px;
     padding: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   
   #sidebar {
@@ -20,6 +23,7 @@
     color: rgba(230, 230, 230, .9);
     list-style: none;
     text-align: center;
+    text-decoration: none;
     padding: 15px 10px;
     border-bottom: 1px solid rgba(100, 100, 100, .3);
   }
@@ -45,11 +49,94 @@
     border: 3px solid #000;
   }
 
-  #sidebar ul ul{
 
-    position: relative;
-   display: none;
+#sidebar ul {
 
+
+list-style: none;
+
+}
+
+#sidebar ul li:hover {
+
+
+background: black ;
+color: blanchedalmond;
+
+}
+
+
+#sidebar ul li span .icono{
+
+font-size: 12px;
+line-height: 16px;
+}
+
+
+#sidebar ul li ul {
+
+display: none;
+
+
+}
+
+
+
+#sidebar ul li ul li{
+
+
+  background: rgb(206, 194, 194);
+
+}
+
+#sidebar ul #activado{
+
+background:black;
+color: white;
+
+
+}
+
+
+
+@media screen and (max-width: 450px) {
+
+body{
+
+
+padding-top: 80px;
+
+}
+
+#sidebar {
+
+
+margin: 0;
+width: 100%;
+position: fixed;
+z-index: 1000;
+top: 0;
+}
+
+#sidebar .toggle-btn{
+
+display: block;
+
+
+}
+
+
+#sidebar {
+
+
+display: none;
+
+}
+
+
+
+}
   
-  }
+
+
 
