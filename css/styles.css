@@ -1,6 +1,9 @@
 * {
     margin: 0px;
     padding: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   
   #sidebar {
@@ -19,10 +22,24 @@
   #sidebar ul li {
     color: rgba(230, 230, 230, .9);
     list-style: none;
-    text-align: center;
+    text-align: left;
+    text-decoration: none;
     padding: 15px 10px;
     border-bottom: 1px solid rgba(100, 100, 100, .3);
+    
+   
   }
+
+#sidebar ul li a {
+    color: rgba(230, 230, 230, .9);
+    text-decoration: none;
+    position: relative;
+    left: 10px;
+    
+   
+  }
+
+
   
   .logo {
     border-radius: 50%;
@@ -45,11 +62,112 @@
     border: 3px solid #000;
   }
 
-  #sidebar ul ul{
 
-    position: relative;
-   display: none;
+#sidebar ul {
 
+
+list-style: none;
+
+
+}
+
+
+#sidebar ul li:hover {
+
+
+/* background: black; */
+color:rgb(240, 114, 135);
+
+}
+
+#sidebar ul li a:hover {
+
+
+  /* background: black; */
+  color: rgb(240, 114, 135);
   
   }
+
+
+
+#sidebar .desplegar {
+
+  
+  position: absolute;
+  right: 20px;
+
+}
+
+
+#sidebar ul li ul {
+
+display: none;
+
+
+
+}
+
+
+
+#sidebar ul li ul li{
+
+
+  background: #151719;
+  padding: 10px;
+  
+
+}
+
+#sidebar ul li ul li a{
+
+
+  color: aliceblue;
+  text-decoration: none;
+
+}
+
+#sidebar ul #activado{
+
+background:black;
+color: white;
+
+
+}
+
+
+
+@media screen and (max-width: 450px) {
+
+  body{
+
+
+  padding-top: 80px;
+
+  }
+
+  #sidebar {
+
+
+  margin: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  
+  }
+
+  #sidebar .toggle-btn{
+
+  display: block;
+
+
+  }
+
+
+  #sidebar {
+    display: none;
+    
+
+  }
+}
 
