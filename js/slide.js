@@ -1,77 +1,75 @@
 $(document).ready(function(){
-var imgItems = $('.slider li').lenght; //numero de slides
-var imgPos = 1;
+    var imgItems = $('.slider li').length; //numero de slides
+    var imgPos = 1;
 
-//agregando mas paginacion 
-
-for(i = 1; i <= imgItems; i++){
-$('.pagination').append('<li><span class="bi bi-circle-fill"></span></li>');
-
-}
+    //agregando mas paginacion 
+    for(let i = 1; i <= imgItems; i++){
+        $('.pagination').append('<li><span class="bi bi-circle-fill"></span></li>');
+    }       
 
 
     $('.slider li').hide(); //Ocultar slides
     $('.slider li:first').show(); //Mostrar el priimer slide
     $('.pagination li:first').css({'color':'#f07287'}); //Damos estilos al primer item de la paginacion 
 
-
-    //Ejecutamos todas las funciones
-
+    //  Ejecutar todas las funciones
     $('.pagination li').click(pagination);
-    $('.flechas span').click(nextSlide);
-    $('.flechas span').click(prevSlide);
-
-    setInterval(function(){
-
-    } , 4000);
+    $('.right span').click(nextSlide);
+    $('.left span').click(prevSlide);
 
 
-    //Funciones
+    setInterval(() => {
+        nextSlide();
+    }, 4000);
 
-    function pagination(){
-        var paginationPos = $(this).index() + 1; //Posicion de los slides
-        console.log(paginationPos);
+    // FUNCIONES
 
-        $('.slider li').hide(); //Ocultando slides
-        $('.slider li:nth-child('+ paginationPos +')').fadeIn(); //MOstrando el slide selecionado 
+    function pagination () {
+        let paginPos = $(this).index() + 1; //posicion de paginacion seleccionada
+        
+        $('.slider li').hide(); //se ocultan todos los slides
+        $('.slider li:nth-child('+ paginPos  +')').fadeIn(); //mostramos el slide seleccionado
 
-        //Estilo del slide selecionado
+        //estilos a la paginacion seleccionada
+        $('.pagination li').css({'color':'#151719'});
+        $(this).css({'color':'#f07287'});
 
-        $('.pagination li').css({'color' : '#151719'});
-        $(this).css({'color' : '#f07287 '});
-
-    }
-
-    function nextSlide(){
-       if(imgPos <= 1){imgPos = imgItems} 
-       else {imgPos--;}
-
-
-        $('.pagination li').css({'color': '#151719'});
-        $('.pagination li:nth-child('+ imgPos +')').css({'color' : '#f07287 '});
-
-
-        $('.slider li').hide(); //Ocultando slides
-        $('.slider li:nth-child(+ imgPos +)').fadeIn(); //MOstrando el slide selecionado 
-
+        imgPos = paginPos;
 
     }
 
-    function prevSlide(){
-        if(imgPos <= 1){imgPos = imgItems} 
-        else {imgPos--;}
- 
- 
-         $('.pagination li').css({'color': '#151719'});
-         $('.pagination li:nth-child('+ imgPos +')').css({'color' : '#f07287 '});
- 
- 
-         $('.slider li').hide(); //Ocultando slides
-         $('.slider li:nth-child(+ imgPos +)').fadeIn(); //MOstrando el slide selecionado 
- 
- 
-     }
- 
+    function nextSlide () { 
+        if (imgPos >= imgItems){
+            imgPos = 1;
+        } else {
+            imgPos++;
+        }
+        
+        $('.pagination li').css({'color':'#151719'});
+        $('.pagination li:nth-child('+imgPos+')').css({'color':'#f07287'});
+
+
+        $('.slider li').hide(); //se ocultan todos los slides
+        $('.slider li:nth-child('+imgPos+')').fadeIn(); //mostramos el slide seleccionado
+    }  
+
+
+
+    function prevSlide () { 
+        if (imgPos <= 1){
+            imgPos = imgItems; 
+        } else {
+            imgPos--;
+        }
+        
+        $('.pagination li').css({'color':'#151719'});
+        $('.pagination li:nth-child('+imgPos+')').css({'color':'#f07287'});
+
+
+        $('.slider li').hide(); //se ocultan todos los slides
+        $('.slider li:nth-child('+imgPos+')').fadeIn(); //mostramos el slide seleccionado
+    }  
+
 
 
 });
