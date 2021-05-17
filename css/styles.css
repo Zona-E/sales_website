@@ -90,11 +90,28 @@ ul, ol{
   padding: 15px 50px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  
+  align-items: left;
+  text-align: left;
   flex-direction:column;
 }
+
+
+.boton1{
+
+
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  width:180px;
+  background: #fff;
+  color: #151719;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  top: 20px;
+
+}
+
 
 .slider .caption h1 {
   font-size: 50px;
