@@ -1,7 +1,3 @@
-
-
-
-
 var images = new Array(
     ['images/sudadera1.jpg'],
     ['images/tshirt1.jpeg'],
