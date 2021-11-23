@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     //agregando mas paginacion 
     for(let i = 1; i <= imgItems; i++){
-        $('.pagination').append('<li><span class="bi bi-circle-fill"></span></li>');
+        $('.pagination').append('<li><i class="fas fa-circle"></i></li>');
     }       
 
 
