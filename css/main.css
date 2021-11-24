@@ -1,66 +1,70 @@
- * {
-    margin: 0px;
-    padding: 0px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-.menu{
-
-height: 80px;
-width: 100%;
-background: #151719;
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
-label.logo{
+/*MENU*/
 
-font-size: 35px;
-font-weight: bold;
-color: white;
-padding: 0 100px;
-line-height: 80px;
-
+.menu {
+  height: 80px;
+  width: 100%;
+  background: #151719;
 }
 
-.menu nav ul{
-float:  right;
-margin-right: 40px;
-
+label.logo {
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  padding: 0 100px;
+  line-height: 80px;
 }
 
-nav li{
-display: inline-block;
-margin: 0 8px;
-line-height: 80px;
-position: relative;
-top: -72px;
-left: 650px;
+.menu nav ul {
+  float: right;
+  margin-right: 40px;
 }
 
-
-nav a{
-color:white;
-font-size: 18px;
-text-transform: uppercase;
-border: 1px solid transparent;
-padding: 7px 10px;
-border-radius: 3px;
+nav li {
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 80px;
+  position: relative;
+  top: -72px;
+  left: 650px;
 }
 
-a.active,a:hover{
+nav a {
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  padding: 7px 10px;
+  border-radius: 3px;
+  text-decoration: none;
+}
 
+a.active,
+a:hover {
   border: 1px solid rgb(240, 114, 135);
-  transition: .5s;
+  transition: 0.5s;
 }
 
+.user-welcome {
+  width: 100%;
+  text-align: center;
+}
 
+/*-------------------------------------------------------------------------------------------*/
 /*SLIDER*/
 
-ul, ol{
+ul,
+ol {
   list-style: none;
 }
-
 
 .show-slide {
   width: 100%;
@@ -71,16 +75,17 @@ ul, ol{
   overflow: hidden;
 }
 
-.slider li, ul {
+.slider li,
+ul {
   width: 100%;
 }
 
-.slider li img{
+.slider li img {
   width: 100%;
   z-index: 4;
 }
 
-.slider .caption{
+.slider .caption {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -92,16 +97,13 @@ ul, ol{
   justify-content: center;
   align-items: left;
   text-align: left;
-  flex-direction:column;
+  flex-direction: column;
 }
 
-
-.boton1{
-
-
+.boton1 {
   text-decoration: none;
   padding: 0.5rem 1rem;
-  width:180px;
+  width: 180px;
   background: #fff;
   color: #151719;
   font-size: 25px;
@@ -109,9 +111,7 @@ ul, ol{
   cursor: pointer;
   position: relative;
   top: 20px;
-
 }
-
 
 .slider .caption h1 {
   font-size: 50px;
@@ -121,7 +121,6 @@ ul, ol{
   margin-top: 10px;
   font-size: 20px;
 }
-
 
 .pagination {
   position: absolute;
@@ -135,10 +134,11 @@ ul, ol{
   font-size: 20px;
   margin: 2px 5px;
   color: #151719;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
-.left, .right {
+.left,
+.right {
   position: absolute;
   top: 0;
   height: 100%;
@@ -158,8 +158,7 @@ ul, ol{
   right: 10px;
 }
 
-
-
+/*-------------------------------------------------------------------------------------------*/
 /*FOOTER*/
 
 footer {
@@ -167,7 +166,6 @@ footer {
   background: #151719;
   color: white;
   border-top: 10px solid rgb(240, 114, 135);
-  
 }
 
 .container-all {
@@ -192,14 +190,13 @@ footer {
 
 .col1 p {
   font-size: 15px;
-  color: #C7C7C7;
+  color: #c7c7c7;
   margin-top: 20px;
 }
 
 .col2 {
   max-width: 400px;
 }
-
 
 .col2 h1 {
   font-size: 25px;
@@ -218,7 +215,7 @@ footer {
 .netrow label {
   margin-top: 10px;
   margin-left: 15px;
-  color: #C7C7C7; 
+  color: #c7c7c7;
 }
 
 .col3 {
@@ -239,7 +236,7 @@ footer {
   height: 35px;
 }
 
-.rowinfo label{
+.rowinfo label {
   margin-top: 10px;
   margin-left: 20px;
   max-width: 150px;
@@ -247,7 +244,7 @@ footer {
 
 .container-footer {
   width: 100%;
-  background: #101010;  
+  background: #101010;
 }
 
 .footer {
@@ -259,10 +256,10 @@ footer {
 }
 
 .copyright {
-  color: #C7C7C7;
+  color: #c7c7c7;
 }
 
-.copyright a{
+.copyright a {
   color: rgb(240, 114, 135);
   text-decoration: none;
   font-weight: bold;
@@ -275,11 +272,11 @@ footer {
 }
 
 @media screen and (max-width: 1100px) {
-  .container-body{
+  .container-body {
     flex-wrap: wrap;
   }
 
-  .col1{
+  .col1 {
     max-width: 100%;
   }
 
@@ -287,5 +284,4 @@ footer {
   .col3 {
     margin-top: 40px;
   }
-
 }
