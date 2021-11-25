@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
 
     
 </body>
-=======
+
 
 <head>
     <meta charset="UTF-8">
@@ -40,9 +40,15 @@
         <p>Password: <br>
             <input type="password" name="password">
         </p>
+
+        <p>Aun no te haz registrado? <a href="/views/Registro.php">Regristate aqui.</p>
+
         <p class="center"><input type="submit" value="Iniciar Sesión"></p>
     </form>
+
+    
+
+
 </body>
 
->>>>>>> origin/test-elias
 </html>

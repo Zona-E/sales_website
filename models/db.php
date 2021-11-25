@@ -13,7 +13,7 @@ class DB
         $this->host = 'localhost';
         $this->db  = 'zona.e_store';
         $this->user = 'root';
-        $this->password = 'eliasgarcia321';
+        $this->password = '';
         $this->charset = 'utf8mb4';
     }
 
