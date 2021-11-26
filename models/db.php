@@ -7,13 +7,14 @@ class DB
     private $user;
     private $password;
     private $charset;
+    public $pdo;
 
     public function __construct()
     {
         $this->host = 'localhost';
         $this->db  = 'zona.e_store';
         $this->user = 'root';
-        $this->password = '';
+        $this->password = 'eliasgarcia321';
         $this->charset = 'utf8mb4';
     }
 

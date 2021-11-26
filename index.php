@@ -6,16 +6,16 @@ include_once 'models/sesion_usuario.php';
 $sesionUsuario = new sesionUsuario();
 $usuario = new Usuario();
 
-if (isset($_SESSION['user'])) {
-    $usuario->setUser($sesionUsuario->getCUser());
+if (isset($_SESSION['email'])) {
+    $usuario->setEmail($sesionUsuario->getCEmail());
     include_once 'views/home.php';
-} else if (isset($_POST['username']) and isset($_POST['password'])) {
-    $nickname = $_POST['username'];
-    $contraseña = $_POST['password'];
+} else if (isset($_POST['Correo_Electronico']) and isset($_POST['Contraseña'])) {
+    $email = $_POST['Correo_Electronico'];
+    $contraseña = $_POST['Contraseña'];
 
-    if ($usuario->userExists($nickname, $contraseña)) {
-        $sesionUsuario->setCUser($nickname);
-        $usuario->setUser($nickname);
+    if ($usuario->userExists($email, $contraseña)) {
+        $sesionUsuario->setCEmail($email);
+        $usuario->setEmail($email);
 
         include_once 'views/home.php';
     } else {

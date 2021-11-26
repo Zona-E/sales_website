@@ -7,14 +7,14 @@ class sesionUsuario
         session_start();
     }
 
-    public function setCUser($user)
+    public function setCEmail($email)
     {
-        $_SESSION['user'] = $user;
+        $_SESSION['email'] = $email;
     }
 
-    public function getCUser()
+    public function getCEmail()
     {
-        return $_SESSION['user'];
+        return $_SESSION['email'];
     }
 
     public function endSession()

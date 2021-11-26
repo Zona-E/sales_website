@@ -5,13 +5,13 @@ include_once('db.php');
 class Usuario extends DB
 {
     private $nombre;
-    private $nickname;
+    private $email;
 
-    public function userExists($user, $pass)
+    public function userExists($email, $pass)
     {
         $md5password = md5($pass);
-        $SQLquery = $this->connect()->prepare('SELECT * FROM sist_users WHERE nickname = :user AND contraseña = :pass');
-        $SQLquery->execute(['user' => $user, 'pass' => $md5password]);
+        $SQLquery = $this->connect()->prepare('SELECT * FROM sist_users WHERE email = :email AND contraseña = :pass');
+        $SQLquery->execute(['email' => $email, 'pass' => $md5password]);
 
         if ($SQLquery->rowCount()) {
             return true;
@@ -20,14 +20,14 @@ class Usuario extends DB
         }
     }
 
-    public function setUser($user)
+    public function setEmail($email)
     {
-        $SQLquery = $this->connect()->prepare('SELECT * FROM sist_users WHERE nickname = :user');
-        $SQLquery->execute(['user' => $user]);
+        $SQLquery = $this->connect()->prepare('SELECT * FROM sist_users WHERE email = :email');
+        $SQLquery->execute(['email' => $email]);
 
-        foreach ($SQLquery as $cUser) {
-            $this->nombre = $cUser['nombre'];
-            $this->nickname = $cUser['nickname'];
+        foreach ($SQLquery as $cEmail) {
+            $this->nombre = $cEmail['nombre'];
+            $this->email = $cEmail['email'];
         }
     }
 
