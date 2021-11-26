@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 23-11-2021 a las 05:08:44
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.11
+-- Host: localhost
+-- Generation Time: Nov 25, 2021 at 01:05 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,27 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `zona.e_store`
+-- Database: `zona_e_store`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `sist_users`
+-- Table structure for table `Registro`
+--
+
+CREATE TABLE `Registro` (
+  `id` int(50) NOT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Apellido` varchar(50) DEFAULT NULL,
+  `Correo_Electronico` varchar(50) DEFAULT NULL,
+  `Contraseña` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sist_users`
 --
 
 CREATE TABLE `sist_users` (
@@ -36,7 +50,7 @@ CREATE TABLE `sist_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `sist_users`
+-- Dumping data for table `sist_users`
 --
 
 INSERT INTO `sist_users` (`id`, `nombre`, `nickname`, `contraseña`, `tipo`) VALUES
@@ -44,21 +58,27 @@ INSERT INTO `sist_users` (`id`, `nombre`, `nickname`, `contraseña`, `tipo`) VAL
 (2, 'Eliardo Reyes', 'eliardo_reyes', '81dc9bdb52d04dc20036dbd8313ed055', 'ADMIN');
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `sist_users`
+-- Indexes for table `Registro`
+--
+ALTER TABLE `Registro`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sist_users`
 --
 ALTER TABLE `sist_users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `sist_users`
+-- AUTO_INCREMENT for table `sist_users`
 --
 ALTER TABLE `sist_users`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
