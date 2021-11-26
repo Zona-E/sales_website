@@ -14,7 +14,7 @@
   <h1>Registro</h1>
   <span>O <a href="../index.php">Login</a></span>
 
-  <form action="../models/Guardar.php" method="POST">
+  <form action="../models/registrarUsuario.php" method="POST">
     <input name="Nombre" type="text" placeholder="Escribe tu nombre">
     <input name="Correo_Electronico" type="text" placeholder="Escribe tu correo">
     <input name="Contraseña" type="password" placeholder="Escribe tu clave">

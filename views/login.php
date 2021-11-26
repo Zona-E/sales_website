@@ -3,22 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-
-    
-
-
-
-    
-</body>
-
-
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sesiones</title>
@@ -35,10 +19,10 @@
         ?>
         <h2>Iniciar sesión</h2>
         <p>Nombre de usuario: <br>
-            <input type="text" name="username">
+            <input type="text" name="Correo_Electronico">
         </p>
         <p>Password: <br>
-            <input type="password" name="password">
+            <input type="password" name="Contraseña">
         </p>
 
         <p>Aun no te haz registrado? <a href="views/Registro.php">Regristate aqui.</p>
@@ -46,7 +30,7 @@
         <p class="center"><input type="submit" value="Iniciar Sesión"></p>
     </form>
 
-    
+
 
 
 </body>
