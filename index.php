@@ -23,5 +23,5 @@ if (isset($_SESSION['email'])) {
         include_once 'views/login.php';
     }
 } else {
-    include_once 'views/login.php';
+    include_once 'views/home.php';
 }

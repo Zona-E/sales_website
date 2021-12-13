@@ -25,7 +25,7 @@
                     <li><a href="#">Categoria<span class="bi bi-chevron-down"></span></a></li>
                     <li><a href="#">Ofertas</a></li>
                     <li><a href="#">Informacion</a></li>
-                    <li><a href="models/logout.php">SALIR</a></li>
+                    <li><a href="views/login.php">ACCEDER</a></li>
                 </ul>
             </nav>
         </div>
@@ -172,7 +172,6 @@
         </div>
 
     </main>
-
 
     <!--FOOTER-->
     <br><br><br><br>
